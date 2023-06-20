@@ -1,0 +1,160 @@
+.contenedorP {
+    background-color: #13131326;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(231, 89, 7, 0.914);
+
+    /* ---------nav Principal--------  */
+    .navP {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1.5rem;
+
+        & input{
+            width: 400px;
+            height: 40px;
+            border-radius: 2px;
+            border-style: none;
+            padding: 5px;
+            outline-style: none;
+        }
+    }
+
+    /* ---------nav Secundario--------  */
+    .navS {
+        display: flex;
+        justify-content: center;
+     
+        & li {
+            margin: 10px;
+            padding: 5px;
+            border-radius: 2px;
+        }
+    }
+
+    & ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding-left: 1rem;
+    }
+
+    & li {
+        padding-left: 10px;
+        cursor: pointer;
+
+    }
+
+
+}
+
+/* carrusel de imagenes */
+.CarruselImg {
+
+    margin: 10px 0% 0% 0%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+}
+
+/*-------Ofertas-------*/
+
+
+.Ofertas {
+    width: 100%;
+    height: 400px;
+}
+
+
+/*------Catalogo--------*/
+.Catalogo {
+    background: rgb(36, 7, 0);
+    background: linear-gradient(90deg, rgb(255, 255, 255) 2%, rgb(231, 231, 231) 9%, rgb(206, 204, 203) 52%, rgb(231, 229, 229) 92%, rgb(251, 251, 251) 100%);
+    margin: 0% 10% 0% 10%;
+    border-radius: 10px;
+    box-shadow: 2px 1px 30px 0px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: stretch;
+    border: solid 0.5px;
+}
+
+.Catalogo h1 {
+    width: 100%;
+    height: 10px;
+}
+
+.CatalogoP {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    justify-content: space-evenly;
+
+    & div {
+        /* width: 90%; */
+        display: flex;
+
+        & img {
+            border-radius: 5px;
+            width: 200px;
+            height: 300px;
+
+        }
+    }
+
+}
+
+.CatalogoS {
+    display: flex;
+    width: 70%;
+
+    & div {
+        width: 50%;
+        display: flex;
+        align-items: center;
+
+        & img {
+            border-radius: 5px;
+            width: 200px;
+            height: 300px;
+        }
+    }
+}
+
+.CatalogoP :hover {
+    & img {
+        box-shadow: 5px 7px 6px 0px;
+        width: 210px;
+            height: 300px;
+    }
+}
+
+.CatalogoS :hover {
+    & img {
+        box-shadow: 5px 7px 6px 0px;
+        width: 210px;
+            height: 300px;
+    }
+}
+
+
+
+.Columnleft {
+    background-color: red;
+    padding: 10px;
+    list-style: none;
+    position: absolute;
+    width: 20%;
+    position: fixed;
+    height: 100%;
+}

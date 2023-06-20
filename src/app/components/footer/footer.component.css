@@ -1,0 +1,21 @@
+.Container{
+    width: 100%;
+    background-color: black;
+    color: rgb(236, 233, 228);
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.ContainerS{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
+    & ul{
+        margin: 20px;
+    }
+    
+}
