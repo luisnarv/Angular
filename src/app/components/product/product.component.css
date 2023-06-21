@@ -44,6 +44,8 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    margin: 0px 20px 0px 20px;
+
     & div :hover{
         background-color: black;
         color: white;

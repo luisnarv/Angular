@@ -21,7 +21,12 @@
         <nav class="navS">
             <ul>
               
-                <li> <a routerLink="/category" routerLinkActive="active" ariaCurrentWhenActive="page">Categorias</a></li>
+                <li>
+                     <!-- <a routerLink="/category" routerLinkActive="active" ariaCurrentWhenActive="page">Categorias</a> -->
+                    <select name="" id=""  >
+                        <option *ngFor="let categories of this.category " value="{{categories}}">{{categories}}</option>
+                    </select>
+                    </li>
                 <li> <a routerLink="/offers" routerLinkActive="active" ariaCurrentWhenActive="page">Ofertas</a></li>
                 <li><a routerLink="/market" routerLinkActive="active" ariaCurrentWhenActive="page">vender</a></li>
                 <li><a routerLink="/fashion" routerLinkActive="active" ariaCurrentWhenActive="page">Moda</a></li>

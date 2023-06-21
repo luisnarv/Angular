@@ -2,7 +2,7 @@ import { Component, Input, inject } from '@angular/core';
 import { Producto } from 'src/app/models/product.model';
 import { HttpClient } from '@angular/common/http';
 import { DetailComponent } from '../detail/detail.component';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras  } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -36,16 +36,17 @@ export class ProductComponent {
     return item.id; // Devuelve un identificador único para cada elemento
   }
   Detail(id: number){
+    //window.scrollTo(0, 0);
     const productosFiltrados = this.Product.filter((producto) =>
     producto.id == id);
-    this.router.navigate(['/product',id],{ state: { productosFiltrados } });
+    this.router.navigate(['/product',id], { fragment: 'top', state: { productosFiltrados } });
   }
 
 
   ngOnInit() {
     this.http.get<Producto[]>('https://api.escuelajs.co/api/v1/products')
       .subscribe((data) => {
-        this.Product = data.slice(0,10);
+        this.Product = data;
       })
   }
 

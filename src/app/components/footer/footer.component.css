@@ -5,7 +5,7 @@
     padding: 10px;
     display: flex;
     justify-content: space-around;
-    align-items: end;
+    align-items: flex-end;
     border-radius: 5px 5px 0px 0px;
 }
 

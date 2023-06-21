@@ -13,6 +13,8 @@ export class AppComponent {
   //una lista de productos que se inicializa  vacio
   Product: Producto[] = [];
 
+   category = ["opcion1","opcion2", "opcion3"]
+
   changeTitle() {
     this.title = 'EVOLUTION';
   }
