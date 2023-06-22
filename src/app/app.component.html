@@ -8,9 +8,16 @@
     <div class="container">
         <nav class="navP">
             <h1>Hola mundo. {{title}}</h1>
-            <span>
-                <input type="text" placeholder="Buscar..">
-            </span>
+            <form class="search">
+                <span>
+                    <input type="text" name="buscar" [(ngModel)]="inputData" placeholder="Buscar..">
+                </span>
+                <span>
+
+                    <button type="button" (click)="guardarDatos(this.inputData[0])">Guardar</button>
+                </span>
+            </form>
+
             <ul>
                 <li><a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
                 </li>
@@ -20,13 +27,13 @@
         </nav>
         <nav class="navS">
             <ul>
-              
+
                 <li>
-                     <!-- <a routerLink="/category" routerLinkActive="active" ariaCurrentWhenActive="page">Categorias</a> -->
-                    <select name="" id=""  >
+                    <!-- <a routerLink="/category" routerLinkActive="active" ariaCurrentWhenActive="page">Categorias</a> -->
+                    <select name="" id="">
                         <option *ngFor="let categories of this.category " value="{{categories}}">{{categories}}</option>
                     </select>
-                    </li>
+                </li>
                 <li> <a routerLink="/offers" routerLinkActive="active" ariaCurrentWhenActive="page">Ofertas</a></li>
                 <li><a routerLink="/market" routerLinkActive="active" ariaCurrentWhenActive="page">vender</a></li>
                 <li><a routerLink="/fashion" routerLinkActive="active" ariaCurrentWhenActive="page">Moda</a></li>
@@ -37,7 +44,7 @@
     <router-outlet></router-outlet>
     <div>
         <app-footer></app-footer>
-    </div> 
+    </div>
 
 </div>
 

@@ -1,7 +1,6 @@
 import { Component, Input, inject } from '@angular/core';
 import { Producto } from 'src/app/models/product.model';
 import { HttpClient } from '@angular/common/http';
-import { DetailComponent } from '../detail/detail.component';
 import { Router, NavigationExtras  } from '@angular/router';
 
 @Component({
@@ -10,6 +9,7 @@ import { Router, NavigationExtras  } from '@angular/router';
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent {
+  constructor(private router: Router) {}
   http = inject(HttpClient);
 
   //una lista de productos que se inicializa  vacio
@@ -30,8 +30,8 @@ export class ProductComponent {
     description:" ",
     id:0,
   } ;
- 
-  constructor(private router: Router) {}
+
+
   trackByFn(index: number, item: any): number {
     return item.id; // Devuelve un identificador único para cada elemento
   }

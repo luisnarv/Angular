@@ -14,7 +14,8 @@ import { OffersComponent } from './components/offers/offers.component';
 import { MarketComponent } from './components/market/market.component';
 import { FashionComponent } from './components/fashion/fashion.component';
 import { HelpComponent } from './components/help/help.component';
-//import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { SearchComponent } from './components/search/search.component';
 
 
 @NgModule({
@@ -29,13 +30,15 @@ import { HelpComponent } from './components/help/help.component';
     OffersComponent,
     MarketComponent,
     FashionComponent,
-    HelpComponent
+    HelpComponent,
+    SearchComponent,
   ],  
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgOptimizedImage, 
+    NgOptimizedImage,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

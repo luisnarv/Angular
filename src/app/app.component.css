@@ -8,6 +8,39 @@
     background-color: rgba(231, 89, 7, 0.914);
 
     /* ---------nav Principal--------  */
+    .search{
+        max-width: 200px;
+        display: flex;
+        align-items: center;
+
+        & input{
+            margin: 10px;
+          width: 400px;
+            height: 40px;
+            border-radius: 2px;
+            border-style: none;
+            padding: 5px;
+            outline-style: none;
+    };
+    & button{
+        height: 30px;
+        padding: 5px;
+        border-style: none;
+        outline-style: none;
+        border-radius: 2.5px;
+        
+    }
+
+    & button:hover{
+        position: relative;
+        transition-duration: 500ms;
+        color: white;
+        font-size: 1rem;
+        background-color: rgba(0, 0, 0, 0.648);
+      
+    }
+
+}
     .navP {
         display: flex;
         flex-direction: row;
@@ -15,14 +48,7 @@
         align-items: center;
         padding: 1.5rem;
 
-        & input{
-            width: 400px;
-            height: 40px;
-            border-radius: 2px;
-            border-style: none;
-            padding: 5px;
-            outline-style: none;
-        }
+        
     }
 
     /* ---------nav Secundario--------  */

@@ -9,6 +9,7 @@ import { OffersComponent } from './components/offers/offers.component';
 import { MarketComponent } from './components/market/market.component';
 import { FashionComponent } from './components/fashion/fashion.component';
 import { HelpComponent } from './components/help/help.component';
+import { SearchComponent } from './components/search/search.component';
 
 const routes: Routes = [
   {path:"home", component: HomepageComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:"market", component: MarketComponent},
   {path:"fashion", component: FashionComponent},
   {path:"help", component: HelpComponent},
+  {path:"search/:id", component: SearchComponent},
 ];  
 
 @NgModule({
