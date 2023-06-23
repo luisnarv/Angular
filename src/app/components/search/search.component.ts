@@ -1,17 +1,22 @@
-import { Component, Input, inject } from '@angular/core';
+import { Component, Input, inject, Output, EventEmitter, Injectable } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Producto } from 'src/app/models/product.model';
 import { HttpClient } from '@angular/common/http';
-import { NgFor } from '@angular/common';
+import { ProductComponent } from '../product/product.component';
+import { Router, NavigationExtras  } from '@angular/router';
+import { ProductServiceService } from 'src/app/service/product-service.service';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  styleUrls: ['./search.component.css'],
+  providers:[ProductComponent, ProductServiceService],
 })
 export class SearchComponent {
   http = inject(HttpClient);
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private service: ProductComponent, private serviceProduct: ProductServiceService ) {}
+
+  detail(id: number) { console.log(id,"este es el id");this.service.Detail(id)}
 
   Product: Producto[] = [];
 
@@ -25,7 +30,9 @@ export class SearchComponent {
     id: 0,
   };
 
+
   ngOnInit() {
+    this.serviceProduct.conole();
     this.http.get<Producto[]>('https://api.escuelajs.co/api/v1/products')
       .subscribe((data) => {
         this.Product = data;

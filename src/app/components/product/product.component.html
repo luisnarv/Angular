@@ -6,7 +6,7 @@
                 <h2>{{product.title}}</h2>
                 <p>category: {{product.category.name}}</p>
                 <p>$ {{product.price}}</p>
-                <img (click)="Detail(product.id)" class="image" [ngSrc]="product.images[0]" alt="" width="300" height="300">
+                <img  class="image" (click)="Detail(product.id)" [ngSrc]="product.images[0]" alt="" width="300" height="300">
                 <div>
                     <button>Comprar</button>
                 </div>

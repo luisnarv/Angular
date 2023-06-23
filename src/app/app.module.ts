@@ -16,6 +16,7 @@ import { FashionComponent } from './components/fashion/fashion.component';
 import { HelpComponent } from './components/help/help.component';
 import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './components/search/search.component';
+import { ProductServiceService } from './service/product-service.service';
 
 
 @NgModule({
@@ -40,7 +41,7 @@ import { SearchComponent } from './components/search/search.component';
     NgOptimizedImage,
     FormsModule,
   ],
-  providers: [],
+  providers: [ProductServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

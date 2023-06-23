@@ -9,7 +9,7 @@
                     <h2>{{product.title}}</h2>
                     <p>category: {{product.category.name}}</p>
                     <p>$ {{product.price}}</p>
-                    <img class="image" [src]="product.images[0]" alt="" width="300" height="300">
+                    <img class="image" (click)="detail(product.id)"   [src]="product.images[0]" alt="" width="300" height="300">
 
                 </ng-container>
               
