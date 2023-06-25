@@ -1,0 +1,29 @@
+<div class="container">
+    <ul>
+        <li *ngFor="let product of Product; trackBy: trackByFn">
+            <section class="product">
+                   <ng-container *ngIf="product">
+                <h2>{{product.productName}}</h2>
+                <p>category: {{product.category.name}}</p>
+                <p>$ {{product.price}}</p>
+                <img  class="image" (click)="Detail(product.id)" [ngSrc]="product.img[0]" alt="" width="300" height="300">
+                <div>
+                    <button>Comprar</button>
+                </div>
+            </ng-container>
+            </section>
+         
+        </li>
+    </ul>
+</div>
+
+<ng-container *ngIf="!product">
+    <h1>Not found</h1>
+</ng-container>
+
+
+                <!-- <div class="image"> -->
+                <!-- <li *ngFor="let image of product.images">
+            <img [ngSrc]="image" alt="" width="300" height="300">
+        </li> -->
+                <!-- </div> -->

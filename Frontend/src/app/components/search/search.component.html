@@ -1,0 +1,21 @@
+<div class="container"> 
+     <section class="Notfound" *ngIf="this.Product.length <= 0">
+                    <h1>Not found</h1>
+                </section>
+    <ul>
+        <li *ngFor="let product of Product">
+            <section class="product">
+                <ng-container *ngIf="product">
+                    <h2>{{product.productName}}</h2>
+                    <p>category: {{product.category.name}}</p>
+                    <p>$ {{product.price}}</p>
+                    <img class="image" (click)="detail(product.id)"   [src]="product.img[0]" alt="" width="300" height="300">
+
+                </ng-container>
+              
+            </section>
+        </li>
+    </ul>
+
+
+</div>

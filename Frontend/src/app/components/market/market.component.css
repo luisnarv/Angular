@@ -1,0 +1,52 @@
+.container{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 50px 100px 50px;
+}
+
+.panel{
+    width: 30%;
+}
+
+.container-products{
+    width: 70%;
+
+    & div{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    & ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    & li{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 5px;
+        background-color: rgba(184, 214, 214, 0.761);
+        padding: 5px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    & p{
+        overflow: hidden;
+            text-overflow:ellipsis ;
+            width: auto;
+                }
+
+        & img{
+            width: 200px;
+            margin:10px ;
+        }
+}

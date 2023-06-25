@@ -1,0 +1,30 @@
+<div class="container">
+    <section class="panel">
+        <ul>
+            <li>Mis productos</li>
+            <li>Historial</li>
+            <li>Mensajes</li>
+            <li>Notificaciones</li>
+            <li>Configuración</li>
+        </ul>
+    </section>
+    <section class="container-products">
+          <div>
+            <h3>Productos más vendidos</h3>
+            <ul> 
+                <li *ngFor="let img  of image"  >
+                       <p>Name: {{image.slice(0,1)}}</p>
+                    <img src="{{img}}" alt="">
+                    <p>Cantidades vendidas: {{img.length}}</p>
+                    <p>Descripción:</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="producto">
+            <h3>Agregar producto</h3>
+        </div>
+
+      
+    </section>
+</div>
