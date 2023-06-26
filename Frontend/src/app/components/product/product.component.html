@@ -7,6 +7,11 @@
                 <p>category: {{product.category.name}}</p>
                 <p>$ {{product.price}}</p>
                 <img  class="image" (click)="Detail(product.id)" [ngSrc]="product.img[0]" alt="" width="300" height="300">
+                  <!-- <div class="image"> 
+                <li *ngFor="let image of product.img">
+            <img [ngSrc]="image" alt="" width="300" height="300">
+        </li> 
+                 </div>  -->
                 <div>
                     <button>Comprar</button>
                 </div>

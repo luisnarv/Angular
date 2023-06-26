@@ -41,6 +41,7 @@ export class ProductComponent {
 
   trackByFn(index: number, item: any): number {
     return item.id; // Devuelve un identificador único para cada elemento
+    
   }
 
 // https://api.escuelajs.co/api/v1/products

@@ -26,7 +26,8 @@ module.exports = (sequelize) =>{
             allowNull: false
         },
         img: {
-            type: DataTypes.TEXT,
+            // type: DataTypes.TEXT,
+           type:  DataTypes.ARRAY(DataTypes.STRING),
             allowNull: true,
         },
         deleted: {

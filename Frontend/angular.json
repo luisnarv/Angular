@@ -64,7 +64,6 @@
               "browserTarget": "miprimerAngular:build:production"
             },
             "development": { 
-              "proxyConfig": "proxy.conf.json",
               "browserTarget": "miprimerAngular:build:development"
             }
           },

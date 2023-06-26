@@ -1,9 +1,11 @@
 const Router = require ("express");
 
-const getApiProducts = require("./products")
+const getProducts = require("./products");
+const user = require ("./users");
 
 const router = Router();
 
-router.use("/Product", getApiProducts);
+router.use("/Product", getProducts);
+router.use("/User", user);
 
 module.exports = router

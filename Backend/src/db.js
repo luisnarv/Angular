@@ -2,7 +2,8 @@ require("dotenv").config();
 const {Sequelize} = require ("sequelize");
 
 
-const products =require("./Models/Products")
+const products =require("./Models/Products");
+const users = require("./Models/Users");
 
 //variables de entorno 
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_DATABASE } = process.env
@@ -16,7 +17,7 @@ const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}
 
 
 products(sequelize);
-
-const {Products }= sequelize.models
+users(sequelize);
+const {Products, Users }= sequelize.models
 
 module.exports = sequelize;
