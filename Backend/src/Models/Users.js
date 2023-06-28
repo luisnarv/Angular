@@ -12,6 +12,12 @@ sequelize.define("Users",{
         type: DataTypes.STRING(50),
         allowNull: false
     },
+    username:{
+        type: DataTypes.STRING(50),
+        unique:true,
+        allowNull:false,
+
+    },
     lastname: {
         type: DataTypes.STRING(50),
         allowNull: false
