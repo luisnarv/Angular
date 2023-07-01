@@ -19,8 +19,10 @@ serve.use("/", routes)
 serve.use((err, req, res, next)=>{
     const status = err.status || 500
     const message = err.message || err
-    console.log(err)
-    res.status(status).send(message)
+    console.log(err.status,"esto es el status")
+    res.status(status).send({
+      error: true,
+      message: message})
 })
 
 module.exports = serve

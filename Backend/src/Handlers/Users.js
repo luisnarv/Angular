@@ -1,4 +1,4 @@
-const { createUser, loginUser} = require ("../Controllers/Users");
+const { createUser, loginUser, changeDatauser, ChangePass} = require ("../Controllers/Users");
 
 
 
@@ -27,8 +27,37 @@ const HandlersLoginUser = async (req, res) =>{
     }
 }
 
+const HandlersChangeDatauser = async (req, res) =>{
+    const {last_username,name, username, lastname, dni, email, password, direction, numphone, tipo_documento} = req.body;
+    
+    try {
+        await changeDatauser(last_username,name, username, lastname, dni, email, password, direction, numphone, tipo_documento);
+        res.status(201).json({ msg: "Data update Successfull"})
+    } catch (error) {
+        res.status(400).json({msg: error.message})
+    }
+}
+
+
+const HandlersChangePass = async (req, res) => {
+const {username, last_password, password} = req.body;
+
+try {
+    await ChangePass(username, last_password, password);
+    res.status(201).json({ msg: "Data update Successfull"})
+} catch (error) {
+    res.status(400).json({msg: error.message})
+}
+
+}
+
+
+
+
 
 module.exports = {
     HandlersCreateUser,
     HandlersLoginUser,
+    HandlersChangeDatauser,
+    HandlersChangePass
 }

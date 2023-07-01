@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken')
+const {models} = require("../db")
 
 const validateJWT = (req, res, next) => {
     const token = req.header('token')
